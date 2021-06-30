@@ -27,8 +27,6 @@ exports.createPages = ({ graphql, actions }) => {
           if (res.errors){
               reject(res.errors)
           }
-          console.log("haaaaaa");
-          console.log(res);
           res.data.allContentfulPost.edges.forEach(edge => {
               createPage({
                   path: edge.node.slug,
