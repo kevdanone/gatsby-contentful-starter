@@ -21,7 +21,7 @@ export default function Post (data) {
     return(
         <Container>
         <Title>{title}</Title>
-        <Content>{content.raw}</Content>
+        <Content>{content.content}</Content>
         </Container>
     )
 }
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
         contentfulPost(slug: {eq: $slug}) {
             title
             slug
+            content{content}
             
         }
     }
