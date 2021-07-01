@@ -35,8 +35,9 @@ export const pageQuery = graphql`
         contentfulPost(slug: {eq: $slug}) {
             title
             slug
-            content{content}
-            
+            content{
+                content
+            }
         }
     }
 `
